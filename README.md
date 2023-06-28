@@ -1,4 +1,4 @@
-# InspectionReports - Django Version 4.1.5
+# InspectionReports CRUD App - Django Version 4.1.5 
 
 ## How To Use 🔧
 
