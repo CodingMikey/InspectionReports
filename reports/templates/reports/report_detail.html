@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ report.title }}</title>
+</head>
+<body>
+    <h1>{{ report.title }}</h1>
+    <p>{{ report.description }}</p>
+    <p>Created at: {{ report.created_at }}</p>
+    <p>Last updated at: {{ report.updated_at }}</p>
+    <a href="{% url 'report_update' report.pk %}">Update</a>
+    <form action="{% url 'report_delete' report.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'report_list' %}">Back to list</a>
+</body>
+</html>

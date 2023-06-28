@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inspection Reports</title>
+</head>
+<body>
+    <h1>Inspection Reports</h1>
+    <ul>
+    {% for report in reports %}
+        <li><a href="{% url 'report_detail' report.pk %}">{{ report.title }}</a></li>
+    {% empty %}
+        <li>No reports available.</li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'report_create' %}">Create a new report</a>
+</body>
+</html>

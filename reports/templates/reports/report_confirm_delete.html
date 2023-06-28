@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Report</title>
+</head>
+<body>
+    <h1>Delete Report</h1>
+    <p>Are you sure you want to delete "{{ report.title }}"?</p>
+    <form action="{% url 'report_delete' report.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'report_list' %}">Back to list</a>
+</body>
+</html>
