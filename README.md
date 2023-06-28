@@ -7,7 +7,7 @@
 $ git clone https://github.com/CodingMikey/InspectionReports.git
 
 # Go into the repository
-$ cd cd inspection_report_project
+$ cd inspection_report_project
 
 # Remove current origin repository
 $ git remote remove origin
